@@ -1,0 +1,26 @@
+/*
+User has selected light theme
+*/
+
+[data-theme=light],
+:root:not([data-theme=dark]) {
+    --todo-background: #f9f5f5;
+}
+
+
+/*
+User has set dark theme
+*/
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --todo-background: #232936;
+    }
+}
+
+/*
+User has selected dark theme
+*/
+
+[data-theme=dark] {
+    --todo-background: rgb(0, 22, 58);
+}
